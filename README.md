@@ -2,20 +2,18 @@
 OpenAI Gym Wrapper for the DeepMind Control Suite
 
 
-Note that there's some issue on Nvidia OpenGL. Rendering backend is specified to the OSMesa, which 
-can be modified on the head of `dm2gym.py`. 
+Note that there's some issue on Nvidia OpenGL. Rendering backend is specified to the OSMesa, which can be modified on the head of `dm2gym.py`. 
 
 
 `RuntimeError` will be raised after the program has been terminated, which is by design. 
 See [issue in dm_control](https://github.com/deepmind/dm_control/issues/79) for details.
 
 
-Different apis with OpenAI Gym are list as follows:
+Except for the APIs listed as follows, others are consistent with OpenAI Gym. 
 1. `make` is consistent with `suite.load` in `dm_control`.
-2. `env.render` has four parameters where one can specific cameras or mode. More details can be found in codes.
+2. `env.render` has four parameters where one can specify cameras or mode. More details can be found in codes.
 
 
-Except the api of `make` and `env.render` whose document can be found in definition codes, others are same as gym.
 
 Simple usages:
 ```python
